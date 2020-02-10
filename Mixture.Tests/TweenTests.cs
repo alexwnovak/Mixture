@@ -1,4 +1,5 @@
 using System;
+using FluentAssertions;
 using Xunit;
 
 namespace Mixture.Tests
@@ -8,7 +9,9 @@ namespace Mixture.Tests
         [Fact]
         public void Test1()
         {
+            var tween = Tween.For<int>();
 
+            tween.Should().NotBeNull();
         }
     }
 }
